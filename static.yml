@@ -37,5 +37,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: deploy gh pages
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy to GitHub Pages
         run: npm run deploy

@@ -1,6 +1,6 @@
 import Card from './Card'
 
-const Homecards = () => {
+const HomeCards = () => {
   return (
     <>
       <section className="py-4">
@@ -37,4 +37,4 @@ const Homecards = () => {
   )
 }
 
-export default Homecards
+export default HomeCards

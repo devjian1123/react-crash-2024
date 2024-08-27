@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logo from '../assets/images/logo.png'
 
 const Navbar = () => {
@@ -20,20 +21,19 @@ const Navbar = () => {
             </a>
             <div className="md:ml-auto">
               <div className="flex space-x-2">
-                <a
-                  href="/index.html"
+                <Link
+                  to="/react-crash-2024/"
                   className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                >Home</a
-                >
-                <a
-                  href="/jobs.html"
+                >Home</Link>
+                <Link
+                  to="/react-crash-2024/jobs"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                >Jobs</a
+                >Jobs</Link
                 >
-                <a
-                  href="/add-job.html"
+                <Link
+                  to="/add-job.html"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                >Add Job</a
+                >Add Job</Link
                 >
               </div>
             </div>

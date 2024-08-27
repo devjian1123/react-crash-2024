@@ -1,19 +1,23 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import HomeCards from './components/HomeCards'
-import JobListings from './components/JobListings'
-import ViewAllJobs from './components/ViewAllJobs'
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider
+} from 'react-router-dom';
+import MainLayout from './layouts/MainLayout'
+import HomePage from './pages/HomePage'
+import JobsPage from './pages/JobsPage'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<MainLayout />}>
+      <Route path='/react-crash-2024/' element={<HomePage />} />
+      <Route path='/react-crash-2024/jobs' element={<JobsPage />} />
+    </Route>
+  ))
 
 const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Hero title="Test Title" subtitle="this is the subtitle" />
-      <HomeCards />
-      <JobListings />
-      <ViewAllJobs />
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
 export default App
